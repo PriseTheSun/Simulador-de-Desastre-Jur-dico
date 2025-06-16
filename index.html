@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="style.scss">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <div class="easyjur-desastre-juridico-container">
+        <div class="easyjur-desastre-juridico-header">
+            <h1>⚖️ Simulador de Desastre Jurídico</h1>
+            <p>Descubra o que acontece quando você não tem um sistema de gestão para seu escritório</p>
+        </div>
+
+        <div id="easyjur-desastre-juridico-progress" class="easyjur-desastre-juridico-progress" style="display: none;">
+            <div class="easyjur-desastre-juridico-progress-bar" id="easyjur-desastre-juridico-progress-bar"></div>
+        </div>
+
+        <div id="easyjur-desastre-juridico-start" class="easyjur-desastre-juridico-start-form">
+            <div class="easyjur-desastre-juridico-form-group">
+                <label for="easyjur-desastre-juridico-name">Como devo te chamar, Doutor(a)?</label>
+                <input type="text" id="easyjur-desastre-juridico-name" placeholder="Seu nome completo">
+            </div>
+            <div class="easyjur-desastre-juridico-form-group">
+                <label for="easyjur-desastre-juridico-clients">Quantos clientes ativos você tem atualmente?</label>
+                <input type="number" id="easyjur-desastre-juridico-clients" placeholder="Número de clientes" min="1">
+            </div>
+            <button id="easyjur-desastre-juridico-start-btn" class="easyjur-desastre-juridico-start-btn">Iniciar Simulação Jurídica ⚡</button>
+        </div>
+
+        <div id="easyjur-desastre-juridico-stats" class="easyjur-desastre-juridico-stats" style="display: none;">
+            <div class="easyjur-desastre-juridico-stat revenue">
+                <div class="easyjur-desastre-juridico-stat-title">Receita Mensal</div>
+                <div class="easyjur-desastre-juridico-stat-value" id="easyjur-desastre-juridico-revenue">R$ 25.000</div>
+            </div>
+            <div class="easyjur-desastre-juridico-stat reputation">
+                <div class="easyjur-desastre-juridico-stat-title">Reputação</div>
+                <div class="easyjur-desastre-juridico-stat-value" id="easyjur-desastre-juridico-reputation">80%</div>
+            </div>
+            <div class="easyjur-desastre-juridico-stat clients">
+                <div class="easyjur-desastre-juridico-stat-title">Clientes</div>
+                <div class="easyjur-desastre-juridico-stat-value" id="easyjur-desastre-juridico-client-count">0</div>
+            </div>
+        </div>
+
+        <div id="easyjur-desastre-juridico-scenario-container" style="display: none;">
+            <div class="easyjur-desastre-juridico-scenario">
+                <div id="easyjur-desastre-juridico-scenario-text" class="easyjur-desastre-juridico-scenario-text"></div>
+                <div id="easyjur-desastre-juridico-options" class="easyjur-desastre-juridico-options"></div>
+                <div id="easyjur-desastre-juridico-consequence" class="easyjur-desastre-juridico-consequence"></div>
+            </div>
+        </div>
+
+        <div id="easyjur-desastre-juridico-result" class="easyjur-desastre-juridico-result">
+            <h2>Resultado Final</h2>
+            <div id="easyjur-desastre-juridico-result-text" class="easyjur-desastre-juridico-result-text"></div>
+        </div>
+
+        <div id="easyjur-desastre-juridico-solution" class="easyjur-desastre-juridico-solution">
+            <h3>Doutor(a), existe uma solução para evitar esses desastres! 🛡️</h3>
+            <p>O <strong>EasyJur</strong> pode transformar completamente sua gestão jurídica com:</p>
+            <ul style="list-style-type: none; margin: 20px 0; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <li>✅ Controle automático de prazos processuais</li>
+                <li>✅ Organização inteligente de documentos</li>
+                <li>✅ Gestão de clientes e comunicação integrada</li>
+                <li>✅ Cobrança automática de honorários</li>
+                <li>✅ Relatórios completos do seu escritório</li>
+            </ul>
+            <button class="easyjur-desastre-juridico-solution-btn">Quero conhecer o EasyJur e evitar esses problemas</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
