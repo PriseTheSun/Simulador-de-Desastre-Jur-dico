@@ -1,12 +1,9 @@
 :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #e74c3c;
-            --accent-color: #3498db;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-            --danger-color: #e74c3c;
+            --easyjur-desastre-juridico-primary-color: #000; /* Preto */
+            --easyjur-desastre-juridico-secondary-color: #E5293F; /* Vermelho */
+            --easyjur-desastre-juridico-accent-color: #80929B; /* Cinza */
+            --easyjur-desastre-juridico-light-color: #FFF; /* Branco */
+            --easyjur-desastre-juridico-success-color: #E5293F; /* Vermelho para receita, reputação e clientes */
         }
 
         * {
@@ -15,18 +12,14 @@
             padding: 0;
         }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f5f7fa;
-            color: var(--dark-color);
-            line-height: 1.6;
-        }
-
         .easyjur-desastre-juridico-container {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--easyjur-desastre-juridico-light-color);
+            color: var(--easyjur-desastre-juridico-primary-color);
+            line-height: 1.6;
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background-color: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
@@ -45,22 +38,73 @@
             left: 25%;
             width: 50%;
             height: 3px;
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            background: var(--easyjur-desastre-juridico-secondary-color);
         }
 
         .easyjur-desastre-juridico-header h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
             margin-bottom: 15px;
-            color: var(--primary-color);
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--easyjur-desastre-juridico-primary-color);
+            font-weight: 700;
         }
 
         .easyjur-desastre-juridico-header p {
             font-size: 1.1rem;
-            color: #7f8c8d;
+            color: var(--easyjur-desastre-juridico-accent-color);
+        }
+
+        .easyjur-desastre-juridico-rules {
+            background: var(--easyjur-desastre-juridico-light-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            border: 1px solid var(--easyjur-desastre-juridico-accent-color);
+        }
+
+        .easyjur-desastre-juridico-rules h2 {
+            font-size: 1.8rem;
+            color: var(--easyjur-desastre-juridico-primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .easyjur-desastre-juridico-rules p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .easyjur-desastre-juridico-rules strong {
+            color: var(--easyjur-desastre-juridico-secondary-color);
+        }
+
+        .easyjur-desastre-juridico-name-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid var(--easyjur-desastre-juridico-accent-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .easyjur-desastre-juridico-name-input:focus {
+            border-color: var(--easyjur-desastre-juridico-secondary-color);
+        }
+
+        .easyjur-desastre-juridico-name-input.error {
+            border-color: var(--easyjur-desastre-juridico-secondary-color);
+            background-color: #fff5f5;
+        }
+
+        .easyjur-desastre-juridico-name-error {
+            color: var(--easyjur-desastre-juridico-secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: none;
         }
 
         .easyjur-desastre-juridico-stats {
@@ -68,58 +112,50 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-bottom: 30px;
+            padding: 20px;
+            background: var(--easyjur-desastre-juridico-light-color);
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
         .easyjur-desastre-juridico-stat {
-            background: white;
+            background: var(--easyjur-desastre-juridico-light-color);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #eee;
+            border: 2px solid var(--easyjur-desastre-juridico-secondary-color);
         }
 
         .easyjur-desastre-juridico-stat:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .easyjur-desastre-juridico-stat-title {
-            font-size: 0.9rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #95a5a6;
+            color: var(--easyjur-desastre-juridico-accent-color);
             margin-bottom: 10px;
         }
 
         .easyjur-desastre-juridico-stat-value {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .easyjur-desastre-juridico-stat.revenue .easyjur-desastre-juridico-stat-value {
-            color: var(--success-color);
-        }
-
-        .easyjur-desastre-juridico-stat.reputation .easyjur-desastre-juridico-stat-value {
-            color: var(--warning-color);
-        }
-
-        .easyjur-desastre-juridico-stat.clients .easyjur-desastre-juridico-stat-value {
-            color: var(--accent-color);
+            color: var(--easyjur-desastre-juridico-success-color);
         }
 
         .easyjur-desastre-juridico-scenario {
-            background: white;
+            background: var(--easyjur-desastre-juridico-light-color);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
             position: relative;
             overflow: hidden;
-            border-left: 5px solid var(--accent-color);
+            border-left: 5px solid var(--easyjur-desastre-juridico-secondary-color);
         }
 
         .easyjur-desastre-juridico-scenario::before {
@@ -129,7 +165,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            background: var(--easyjur-desastre-juridico-secondary-color);
         }
 
         .easyjur-desastre-juridico-scenario-text {
@@ -139,7 +175,7 @@
         }
 
         .easyjur-desastre-juridico-scenario-text b {
-            color: var(--secondary-color);
+            color: var(--easyjur-desastre-juridico-secondary-color);
             font-weight: 600;
         }
 
@@ -151,8 +187,8 @@
 
         .easyjur-desastre-juridico-option {
             padding: 15px 20px;
-            background-color: white;
-            border: 2px solid #eee;
+            background-color: var(--easyjur-desastre-juridico-light-color);
+            border: 2px solid var(--easyjur-desastre-juridico-accent-color);
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
@@ -164,8 +200,8 @@
         }
 
         .easyjur-desastre-juridico-option:hover {
-            border-color: var(--accent-color);
-            background-color: #f8fafc;
+            border-color: var(--easyjur-desastre-juridico-secondary-color);
+            background-color: #f8f8f8;
             transform: translateX(5px);
         }
 
@@ -178,31 +214,55 @@
             padding: 20px;
             background-color: #fff5f5;
             border-radius: 8px;
-            border-left: 4px solid var(--danger-color);
+            border-left: 4px solid var(--easyjur-desastre-juridico-secondary-color);
             display: none;
-            animation: fadeIn 0.5s;
+            animation: easyjur-desastre-juridico-fadeIn 0.5s;
             font-size: 1.1rem;
         }
 
         .easyjur-desastre-juridico-consequence b {
-            color: var(--danger-color);
+            color: var(--easyjur-desastre-juridico-secondary-color);
+        }
+
+        .easyjur-desastre-juridico-continue-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--easyjur-desastre-juridico-secondary-color);
+            color: var(--easyjur-desastre-juridico-light-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: none;
+        }
+
+        .easyjur-desastre-juridico-continue-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(229, 41, 63, 0.3);
+        }
+
+        .easyjur-desastre-juridico-continue-btn:active {
+            transform: translateY(0);
         }
 
         .easyjur-desastre-juridico-result {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            background: var(--easyjur-desastre-juridico-light-color);
             border-radius: 10px;
             display: none;
             margin-top: 20px;
-            border: 1px solid #dfe6e9;
+            border: 1px solid var(--easyjur-desastre-juridico-accent-color);
         }
 
         .easyjur-desastre-juridico-result h2 {
-            color: var(--primary-color);
+            color: var(--easyjur-desastre-juridico-primary-color);
             margin-bottom: 25px;
             font-size: 2rem;
             font-family: 'Playfair Display', serif;
+            font-weight: 700;
         }
 
         .easyjur-desastre-juridico-result-text {
@@ -214,19 +274,20 @@
         .easyjur-desastre-juridico-solution {
             margin-top: 40px;
             padding: 30px;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            background: var(--easyjur-desastre-juridico-light-color);
             border-radius: 10px;
             text-align: center;
-            border: 1px solid #bbdefb;
+            border: 1px solid var(--easyjur-desastre-juridico-accent-color);
             display: none;
-            animation: fadeIn 1s;
+            animation: easyjur-desastre-juridico-fadeIn 1s;
         }
 
         .easyjur-desastre-juridico-solution h3 {
-            color: var(--primary-color);
+            color: var(--easyjur-desastre-juridico-primary-color);
             margin-bottom: 20px;
             font-size: 1.8rem;
             font-family: 'Playfair Display', serif;
+            font-weight: 700;
         }
 
         .easyjur-desastre-juridico-solution p {
@@ -239,68 +300,31 @@
 
         .easyjur-desastre-juridico-solution-btn {
             padding: 15px 30px;
-            background: linear-gradient(to right, var(--accent-color), #2980b9);
-            color: white;
+            background: var(--easyjur-desastre-juridico-secondary-color);
+            color: var(--easyjur-desastre-juridico-light-color);
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-size: 1.1rem;
             font-weight: 600;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+            box-shadow: 0 5px 15px rgba(229, 41, 63, 0.3);
         }
 
         .easyjur-desastre-juridico-solution-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(41, 128, 185, 0.4);
+            box-shadow: 0 8px 25px rgba(229, 41, 63, 0.4);
         }
 
         .easyjur-desastre-juridico-solution-btn:active {
             transform: translateY(1px);
         }
 
-        .easyjur-desastre-juridico-emoji {
-            font-size: 1.8rem;
-            margin-right: 15px;
-        }
-
-        .easyjur-desastre-juridico-start-form {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .easyjur-desastre-juridico-form-group {
-            margin-bottom: 25px;
-        }
-
-        .easyjur-desastre-juridico-form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .easyjur-desastre-juridico-form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .easyjur-desastre-juridico-form-group input:focus {
-            border-color: var(--accent-color);
-            outline: none;
-        }
-
         .easyjur-desastre-juridico-start-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
-            color: white;
+            background: var(--easyjur-desastre-juridico-secondary-color);
+            color: var(--easyjur-desastre-juridico-light-color);
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
@@ -312,7 +336,7 @@
 
         .easyjur-desastre-juridico-start-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+            box-shadow: 0 8px 20px rgba(229, 41, 63, 0.3);
         }
 
         .easyjur-desastre-juridico-start-btn:active {
@@ -322,7 +346,7 @@
         .easyjur-desastre-juridico-progress {
             width: 100%;
             height: 6px;
-            background-color: #ecf0f1;
+            background-color: var(--easyjur-desastre-juridico-accent-color);
             border-radius: 3px;
             margin-bottom: 30px;
             overflow: hidden;
@@ -330,16 +354,99 @@
 
         .easyjur-desastre-juridico-progress-bar {
             height: 100%;
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            background: var(--easyjur-desastre-juridico-secondary-color);
             width: 0%;
             transition: width 0.5s;
         }
 
-        @keyframes fadeIn {
+        .easyjur-desastre-juridico-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .easyjur-desastre-juridico-popup-content {
+            background: var(--easyjur-desastre-juridico-light-color);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .easyjur-desastre-juridico-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--easyjur-desastre-juridico-primary-color);
+            transition: color 0.3s;
+        }
+
+        .easyjur-desastre-juridico-close:hover {
+            color: var(--easyjur-desastre-juridico-secondary-color);
+        }
+
+        .easyjur-desastre-juridico-form-container {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .easyjur-desastre-juridico-form-container h3 {
+            color: var(--easyjur-desastre-juridico-primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .easyjur-desastre-juridico-loader {
+            display: none;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--easyjur-desastre-juridico-primary-color);
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .easyjur-desastre-juridico-loader::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 4px solid var(--easyjur-desastre-juridico-secondary-color);
+            border-top: 4px solid transparent;
+            border-radius: 50%;
+            animation: easyjur-desastre-juridico-spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes easyjur-desastre-juridico-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes easyjur-desastre-juridico-fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
+        /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
             .easyjur-desastre-juridico-container {
                 padding: 20px;
@@ -356,5 +463,91 @@
 
             .easyjur-desastre-juridico-scenario {
                 padding: 20px;
+            }
+
+            .easyjur-desastre-juridico-popup-content {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+
+        /* Responsividade para notebooks (1024px a 1440px) */
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            .easyjur-desastre-juridico-container {
+                max-width: 800px;
+                margin: 30px auto;
+                padding: 25px;
+            }
+
+            .easyjur-desastre-juridico-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .easyjur-desastre-juridico-header p {
+                font-size: 1rem;
+            }
+
+            .easyjur-desastre-juridico-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .easyjur-desastre-juridico-stat {
+                padding: 15px;
+            }
+
+            .easyjur-desastre-juridico-stat-value {
+                font-size: 2rem;
+            }
+
+            .easyjur-desastre-juridico-scenario {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+
+            .easyjur-desastre-juridico-scenario-text {
+                font-size: 1.1rem;
+            }
+
+            .easyjur-desastre-juridico-option {
+                font-size: 0.95rem;
+                padding: 12px 18px;
+            }
+
+            .easyjur-desastre-juridico-consequence {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .easyjur-desastre-juridico-continue-btn {
+                font-size: 0.95rem;
+                padding: 8px 18px;
+            }
+
+            .easyjur-desastre-juridico-result h2 {
+                font-size: 1.8rem;
+            }
+
+            .easyjur-desastre-juridico-result-text {
+                font-size: 1.1rem;
+            }
+
+            .easyjur-desastre-juridico-solution h3 {
+                font-size: 1.6rem;
+            }
+
+            .easyjur-desastre-juridico-solution p {
+                font-size: 1rem;
+            }
+
+            .easyjur-desastre-juridico-solution-btn {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            .easyjur-desastre-juridico-popup-content {
+                max-width: 550px;
+                padding: 25px;
             }
         }
